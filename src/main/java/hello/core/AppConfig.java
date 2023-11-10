@@ -23,12 +23,12 @@ public class AppConfig {
         return new OrderServiceImpl(getMemberRepository(), getDisCountPolicy());
     }
     @Bean
-    public static MemoryMemberRepository getMemberRepository() {
+    public MemoryMemberRepository getMemberRepository() {
         return new MemoryMemberRepository();
     }
 
     @Bean
-    public static DiscountPolicy getDisCountPolicy() {
+    public DiscountPolicy getDisCountPolicy() {
         return new RateDiscountPolicy();
     }
 }
